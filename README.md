@@ -1,6 +1,8 @@
 # jinja-comprehensions
 Jinja2 environments providing support for list/dict comprehensions, set literals/comprehensions, generator expressions, and list/dict spreading.
 
+
+### Set literals
 ```jinja
 {{ {'set', 'set', 'literal', 'literal'} }}
 ```
@@ -8,6 +10,7 @@ Jinja2 environments providing support for list/dict comprehensions, set literals
 {'literal', 'set'}
 ```
 
+### Comprehensions
 ```jinja
 list: {{ [n // 2 for n in range(10)] }}
 set:  {{ {n // 2 for n in range(10)} }}
@@ -19,6 +22,7 @@ set:  {0, 1, 2, 3, 4}
 dict: {0: 0, 1: 0, 2: 1, 3: 1, 4: 2, 5: 2, 6: 3, 7: 3, 8: 4, 9: 4}
 ```
 
+### Generator expressions
 ```jinja
 {{ (n // 2 for n in range(10)) | join(', ') }}
 ```
@@ -26,6 +30,7 @@ dict: {0: 0, 1: 0, 2: 1, 3: 1, 4: 2, 5: 2, 6: 3, 7: 3, 8: 4, 9: 4}
 0, 0, 1, 1, 2, 2, 3, 3, 4, 4
 ```
 
+### List/dict spreading
 ```jinja
 {% set stuff = {'b': 98, 'c': 99, 'd': 100} -%}
 {{ {'a': 97, **stuff, 'e': 101} }}
