@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "jinja-comprehensions"
-version = "0.1.0"
+version = "0.1.1"
 description = "Jinja2 environment supporting Python comprehensions"
 authors = ["Zach Kanzler <zach@rewst.io>"]
 repository = "https://github.com/RewstApp/jinja-comprehensions"
